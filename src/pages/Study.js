@@ -1,3 +1,5 @@
+import React from "react";
+
 function Study() {
   return <h1>Study Page</h1>;
 }
