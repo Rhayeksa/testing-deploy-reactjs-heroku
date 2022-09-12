@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import {
+  Route, Routes
+} from "react-router-dom";
 import './App.css';
+import OffcanvasExample from './components/Navbar';
+import About from './pag/About';
+import Error from './pag/Error';
+import Experience from "./pag/Experience";
+import Home from './pag/Home';
+import Study from "./pag/Study";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <OffcanvasExample />
+      <div>
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Routes>
+          <Route path="/study" element={<Study />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </div>
     </div>
   );
 }
