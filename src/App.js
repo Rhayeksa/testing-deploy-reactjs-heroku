@@ -3,11 +3,11 @@ import {
 } from "react-router-dom";
 import './App.css';
 import OffcanvasExample from './components/Navbar';
-import About from './pag/About';
-import Error from './pag/Error';
-import Experience from "./pag/Experience";
-import Home from './pag/Home';
-import Study from "./pag/Study";
+import About from './page/About';
+import Error from './page/Error';
+import Experience from "./page/Experience";
+import Home from './page/Home';
+import Study from "./page/Study";
 
 function App() {
   return (
